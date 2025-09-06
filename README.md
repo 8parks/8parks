@@ -16,4 +16,5 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-﻿[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=8parks&langs_count=10&layout=compact&theme=light)]()﻿
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=8parks&include_orgs=true&layout=compact)
+﻿
