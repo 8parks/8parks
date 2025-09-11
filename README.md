@@ -19,3 +19,11 @@ Here are some ideas to get you started:
 ﻿
 
 -->
+
+### Languages (commit-based)
+![](https://raw.githubusercontent.com/8parks/8parks/cards-output/profile-summary-card-output/default/3-most-commit-language.svg)
+
+### Languages (repos-based)
+![](https://raw.githubusercontent.com/8parks/8parks/cards-output/profile-summary-card-output/default/2-repos-per-language.svg)
+
+
