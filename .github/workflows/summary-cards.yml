@@ -1,8 +1,8 @@
 name: GitHub-Profile-Summary-Cards
 on:
   schedule:
-    - cron: "0 0 * * *"     # 매일 00:00 UTC에 갱신 (한국 09:00)
-  workflow_dispatch:        # 필요시 수동 실행
+    - cron: "0 0 * * *"     # 매일 00:00 UTC (KST 09:00)
+  workflow_dispatch:
 
 jobs:
   build:
@@ -10,18 +10,31 @@ jobs:
     permissions:
       contents: write
     steps:
+      # 1) 기본 자격증명 끄기 (PAT만 쓰게)
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
+      # 2) git 사용자 & 원격에 PAT 주입
+      - name: Setup git auth
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://${{ secrets.SUMMARY_GITHUB_TOKEN }}@github.com/8parks/8parks.git
+
+      # 3) 출력 전용 브랜치 체크아웃
+      - name: Switch to output branch
+        run: |
+          git fetch origin
+          git checkout -B cards-output
+
+      # 4) 카드 생성 (PAT로 API 호출)
       - uses: vn7n24fzkq/github-profile-summary-cards@release
         env:
           GITHUB_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN }}
         with:
-          USERNAME: 8parks          
-          BRANCH_NAME: "main"                
-          UTC_OFFSET: 9                      # 한국 시간
-          # 필요시 제외할 언어(쉼표 구분): 
+          USERNAME: 8parks
+          BRANCH_NAME: cards-output          # ← 출력 브랜치 지정 
+          UTC_OFFSET: 9
           EXCLUDE: ""
-          # 이미지 자동 커밋/푸시
-          AUTO_PUSH: true
-          # 테마 바꾸고 싶으면 아래 theme 파라미터 추가
-          # THEME: "tokyonight"
+          AUTO_PUSH: true                    # 생성 액션이 직접 commit/push
