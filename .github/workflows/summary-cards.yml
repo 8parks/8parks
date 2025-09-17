@@ -26,7 +26,12 @@ jobs:
       - name: Switch to output branch
         run: |
           git fetch origin
-          git checkout -B cards-output
+          if git rev-parse --verify origin/cards-output; then
+            git checkout cards-output
+          else
+            git checkout -b cards-output
+            git push origin cards-output
+          fi
 
       # 4) 카드 생성 (PAT로 API 호출)
       - uses: vn7n24fzkq/github-profile-summary-cards@release
