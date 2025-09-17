@@ -23,10 +23,8 @@ Here are some ideas to get you started:
 ### 공사 중...🛠️
 &nbsp;
 
-### Languages (commit-based)
-![](https://raw.githubusercontent.com/8parks/8parks/cards-output/profile-summary-card-output/default/3-most-commit-language.svg)
-
-### Languages (repos-based)
-![](https://raw.githubusercontent.com/8parks/8parks/cards-output/profile-summary-card-output/default/2-repos-per-language.svg)
 
 
+[![](https://raw.githubusercontent.com/8parks/8parks/main/profile-summary-card-output/nord_bright/0-profile-details.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards)
+[![](https://raw.githubusercontent.com/8parks/8parks/main/profile-summary-card-output/nord_bright/1-repos-per-language.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards) [![](https://raw.githubusercontent.com/8parks/8parks/main/profile-summary-card-output/nord_bright/2-most-commit-language.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards)
+[![](https://raw.githubusercontent.com/8parks/8parks/main/profile-summary-card-output/nord_bright/3-stats.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards) [![](https://raw.githubusercontent.com/8parks/8parks/main/profile-summary-card-output/nord_bright/4-productive-time.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards)
