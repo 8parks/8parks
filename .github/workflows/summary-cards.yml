@@ -20,7 +20,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git remote set-url origin https://${{ secrets.SUMMARY_GITHUB_TOKEN }}@github.com/8parks/8parks.git
+          git remote set-url origin https://x-access-token:${{ secrets.SUMMARY_GITHUB_TOKEN }}@github.com/8parks/8parks.git
 
       # 3) 출력 전용 브랜치 체크아웃
       - name: Switch to output branch
