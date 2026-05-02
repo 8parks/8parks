@@ -1,7 +1,7 @@
 ## Siwon Park ₊˚⊹♡
 
 CSE student exploring the intersection of **cloud, AI, and security**.  
-I enjoy turning real-world problems into deployable technical solutions and explaining complex ideas to diverse audiences.
+I enjoy turning real-world problems into deployable technical solutions and explaining ideas to diverse audiences.
 
 #### Education
 Ewha Womans University
